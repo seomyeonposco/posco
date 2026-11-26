@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <title>서면포스코부동산 | 서면더샵센트럴스타 전문 중개</title>
+  <style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Toss Product Sans", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+        font-size: 14px;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #f8f9ff;
+        color: #191f28;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    img { max-width: 100%; object-fit: cover; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed": "#001945",
+            "surface-container": "#e9eefb",
+            "secondary-container": "#2d6fe5",
+            "on-primary-fixed-variant": "#004491",
+            "on-surface-variant": "#414754",
+            "primary-fixed": "#d7e2ff",
+            "on-secondary-fixed-variant": "#00429b",
+            "on-secondary-container": "#fefcff",
+            "inverse-on-surface": "#ebf1fe",
+            "on-error": "#ffffff",
+            "outline-variant": "#c1c6d6",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-fixed": "#001a40",
+            "muted": "#8b95a1",
+            "secondary": "#0056c6",
+            "surface": "#f2f4f6",
+            "surface-container-lowest": "#ffffff",
+            "weak-background": "#e8f3ff",
+            "tertiary-fixed-dim": "#ffb689",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#fefcff",
+            "danger": "#e42939",
+            "inverse-surface": "#2b313a",
+            "surface-bright": "#f8f9ff",
+            "tertiary-container": "#ba5900",
+            "surface-dim": "#d5dae7",
+            "surface-container-highest": "#dde3ef",
+            "surface-container-high": "#e3e8f5",
+            "error-container": "#ffdad6",
+            "body": "#4e5968",
+            "on-tertiary-fixed": "#311300",
+            "border": "#e5e8eb",
+            "primary-container": "#1071e5",
+            "canvas": "#ffffff",
+            "surface-tint": "#005bbe",
+            "foreground": "#191f28",
+            "on-primary": "#ffffff",
+            "on-background": "#161c25",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#acc7ff",
+            "inverse-primary": "#acc7ff",
+            "background": "#f8f9ff",
+            "error": "#ba1a1a",
+            "on-surface": "#161c25",
+            "tertiary-fixed": "#ffdbc8",
+            "primary": "#0059b9",
+            "secondary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#b0c6ff",
+            "surface-variant": "#dde3ef",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary-fixed-variant": "#743500",
+            "outline": "#727785",
+            "tertiary": "#944600",
+            "on-tertiary": "#ffffff"
+          },
+          fontSize: {
+            "headline-sm": ["1.375rem", { lineHeight: "1.35", fontWeight: "700" }],
+            "headline-xs": ["1.125rem", { lineHeight: "1.4", fontWeight: "700" }],
+            "body-md": ["1rem", { lineHeight: "1.6" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+            "label-md": ["0.875rem", { lineHeight: "1.4", fontWeight: "600" }],
+            "label-sm": ["0.75rem", { lineHeight: "1.4" }]
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-sm": "8px",
+            "margin": "24px",
+            "space-xl": "32px",
+            "space-xs": "4px",
+            "space-lg": "24px",
+            "gutter": "16px",
+            "space-md": "16px"
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+</head>
+<body class="bg-surface font-body flex flex-col min-h-screen text-[14px] sm:text-[15px]">
+  <header class="sticky top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe border-b border-border/60">
+    <div class="max-w-5xl mx-auto h-16 px-gutter md:px-6 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 min-h-[44px]">
+        <span class="text-headline-xs text-on-surface font-bold">서면포스코부동산</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="min-h-[44px] inline-flex items-center px-2 text-body-sm font-bold text-primary">홈</a>
+        <a href="news.html" class="min-h-[44px] inline-flex items-center px-2 text-body-sm font-medium text-on-surface-variant hover:text-primary transition-colors">부동산 소식</a>
+        <a href="#agent-section" class="min-h-[44px] inline-flex items-center px-2 text-body-sm font-medium text-on-surface-variant hover:text-primary transition-colors">소개</a>
+        <a href="admin.html" class="min-h-[44px] inline-flex items-center px-3 rounded-xl bg-surface-container text-body-sm font-medium text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors">관리자</a>
+      </nav>
+      <a href="admin.html" aria-label="관리자 페이지" class="w-11 h-11 rounded-full bg-primary flex items-center justify-center shrink-0 active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex flex-col relative w-full max-w-5xl mx-auto px-gutter md:px-6 pt-6 pb-28 md:pb-12 bg-surface flex-1">
+    <div class="flex flex-col w-full gap-space-lg">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+        <div class="lg:col-span-7 relative w-full rounded-2xl bg-surface-container-low p-6 md:p-8 overflow-hidden flex flex-col justify-between shadow-sm">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-primary/10 pointer-events-none"></div>
+          <div class="flex flex-col gap-space-sm z-10">
+            <span class="text-label-sm text-primary font-bold uppercase tracking-wider">서면더샵센트럴스타 정문 앞</span>
+            <h1 class="text-headline-sm md:text-[28px] md:leading-tight text-on-surface font-bold">서면포스코부동산</h1>
+            <p class="text-body-sm md:text-body-md text-body">고객님의 소중한 자산을 안전하고 빠르게 중개해 드립니다. 정확한 시세 분석과 책임 중개.</p>
+          </div>
+          <div class="mt-space-lg z-10 flex flex-col sm:flex-row gap-3">
+            <a class="w-full sm:flex-1 min-h-[48px] px-5 bg-primary text-on-primary rounded-xl flex items-center justify-center gap-space-xs font-bold text-body-md shadow-sm active:scale-[0.98] transition-transform" href="tel:051-000-0000">
+              <span class="material-symbols-outlined text-[20px]">call</span>
+              전화 연결하기
+            </a>
+            <a class="w-full sm:w-auto min-h-[48px] px-5 bg-surface-container-lowest text-primary border border-primary/20 rounded-xl flex items-center justify-center gap-space-xs font-bold text-body-md active:scale-[0.98] transition-transform" href="news.html">
+              <span class="material-symbols-outlined text-[20px]">newspaper</span>
+              부동산 소식
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <h2 class="text-headline-xs text-on-surface">간편 매물 접수하기</h2>
+            <p class="text-body-sm text-body">매물을 남겨주시면 신속하게 연락드리겠습니다.</p>
+          </div>
+          <form id="quick-listing-form" class="flex flex-col gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <label for="quick-tel" class="text-label-md text-on-surface-variant">연락처</label>
+              <input id="quick-tel" class="w-full min-h-[44px] h-12 px-4 rounded-xl bg-surface text-on-surface placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-body-md" placeholder="010-0000-0000" required type="tel">
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <label class="text-label-md text-on-surface-variant">매물 종류</label>
+              <div id="deal-type-group" class="grid grid-cols-3 gap-space-sm">
+                <button class="min-h-[44px] py-2.5 rounded-xl bg-primary text-on-primary text-label-md font-medium transition-all" type="button">매매</button>
+                <button class="min-h-[44px] py-2.5 rounded-xl bg-surface text-on-surface text-label-md font-medium hover:bg-primary/10 transition-all" type="button">전세</button>
+                <button class="min-h-[44px] py-2.5 rounded-xl bg-surface text-on-surface text-label-md font-medium hover:bg-primary/10 transition-all" type="button">월세</button>
+              </div>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <label for="quick-memo" class="text-label-md text-on-surface-variant">메모 (동/호수 및 상세내용)</label>
+              <textarea id="quick-memo" class="w-full p-4 rounded-xl bg-surface text-on-surface placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-body-sm resize-none" placeholder="예: 101동 1502호, 빠른 거래 원합니다." rows="2"></textarea>
+            </div>
+            <button class="w-full min-h-[48px] bg-secondary text-on-secondary rounded-xl font-bold text-body-md active:scale-[0.98] transition-transform" type="submit">
+              간편 접수 완료
+            </button>
+            <p id="quick-form-msg" class="hidden text-body-sm text-primary font-medium text-center"></p>
+          </form>
+        </div>
+      </div>
+
+      <section id="board-preview-section" class="flex flex-col gap-space-md">
+        <div class="flex items-center justify-between px-1">
+          <h2 class="text-headline-xs text-on-surface font-bold">최신 소식</h2>
+          <a href="news.html" class="min-h-[44px] inline-flex items-center px-2 text-label-sm text-primary font-bold">전체보기</a>
+        </div>
+        <div id="board-preview" class="grid grid-cols-1 md:grid-cols-3 gap-space-md"></div>
+        <div class="flex justify-center pt-1">
+          <a href="news.html" class="w-full sm:w-auto min-h-[48px] px-6 rounded-xl bg-surface-container-lowest border border-border text-primary font-bold text-body-sm inline-flex items-center justify-center gap-1.5 shadow-sm hover:bg-weak-background transition-colors">
+            전체 게시글 보기 →
+          </a>
+        </div>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+        <div id="agent-section" class="w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <h2 class="text-headline-xs text-on-surface">대표 공인중개사 소개</h2>
+            <p class="text-body-sm text-body">정직과 신뢰를 바탕으로 책임 중개를 약속드립니다.</p>
+          </div>
+          <div class="flex gap-space-md items-center pt-2">
+            <img src="agent.jpg" alt="대표 공인중개사 박용모" class="w-20 h-20 rounded-full object-cover max-w-full shrink-0 border border-border">
+            <div class="flex flex-col gap-space-xs flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-space-xs">
+                <span class="px-2 py-0.5 rounded bg-weak-background text-primary text-label-sm font-bold">대표 공인중개사</span>
+                <span class="text-label-md text-on-surface-variant font-bold">박용모</span>
+              </div>
+              <p class="text-body-sm text-on-surface">"고객의 자산을 내 자산처럼 안전하고 가치 있게 거래해 드립니다."</p>
+            </div>
+          </div>
+          <div class="pt-3 flex items-center justify-between border-t border-surface text-body-sm text-muted">
+            <span>전문 분야: 서면더샵센트럴스타 아파트/오피스텔 · 서면써밋더뉴 아파트 · 서면일대 상가</span>
+          </div>
+        </div>
+
+        <div class="w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center justify-between">
+              <h2 class="text-headline-xs text-on-surface">고객 실제 후기</h2>
+              <div class="flex items-center gap-space-xs text-primary font-bold text-body-sm">
+                <span class="material-symbols-outlined text-[18px]">star</span>
+                <span>5.0 / 5.0</span>
+              </div>
+            </div>
+            <p class="text-body-sm text-body">실제 거래 고객님들이 남겨주신 소중한 후기입니다.</p>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <div class="w-full rounded-xl bg-surface p-4 flex flex-col gap-space-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-label-md font-bold text-on-surface">김○호 고객님</span>
+                <span class="text-label-sm text-muted">39평 매매 거래</span>
+              </div>
+              <p class="text-body-sm text-body">"처음 집을 사는 거라 걱정이 많았는데 시세 분석부터 계약까지 너무 꼼꼼하게 잘 도와주셨어요! 강력 추천합니다."</p>
+            </div>
+            <div class="w-full rounded-xl bg-surface p-4 flex flex-col gap-space-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-label-md font-bold text-on-surface">이○영 고객님</span>
+                <span class="text-label-sm text-muted">47평 전세 거래</span>
+              </div>
+              <p class="text-body-sm text-body">"원하는 조건에 딱 맞는 매물을 빠르게 찾아주셔서 이사 잘 마쳤습니다. 언제나 친절하게 응대해 주셔서 감사해요."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-space-md">
+        <div class="flex items-center justify-between px-1">
+          <h2 class="text-headline-xs text-on-surface">센트럴스타 추천 매물</h2>
+          <a href="news.html" class="min-h-[44px] inline-flex items-center px-2 text-label-sm text-primary font-bold">소식 더보기</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <div class="w-full rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-md items-start">
+              <div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvzL-OSwo3jPYy9G__Aeq4rn5wkHuk3b8M-kL3YIsibKM31SOb5oj0IIGpUab68QF-XySEMDgRZjENI-LeKb5gmTI1GS7WjmdgxruoEjbG90TSLr08PSnMm4o5Z8BqDfuUfQaN_nCeJWkWNIEgk45smz5KU-QNR-Ikm499l2OB_HH9Zrj-lUT4QDtPfmA_El4MOshrHjVzQ8ECCJky0FZd29H2iQSaCehCgqh2mM');"></div>
+              <div class="flex flex-col gap-space-xs flex-1 min-w-0">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-2 py-0.5 rounded bg-weak-background text-primary text-label-sm font-bold">매매</span>
+                  <span class="text-label-sm text-muted">102동 · 고층</span>
+                </div>
+                <h3 class="text-headline-xs text-on-surface truncate">서면더샵센트럴스타 39평</h3>
+                <p class="text-body-md font-bold text-primary">8억 5,000만원</p>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center justify-between border-t border-surface">
+              <span class="text-label-sm text-muted">방 3개 · 욕실 2개</span>
+              <span class="text-label-sm text-on-surface-variant font-medium">입주협의</span>
+            </div>
+          </div>
+
+          <div class="w-full rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-md items-start">
+              <div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWoUmIYofbMbV4di629PV30T91yHM_OF4EaypWUVFVcXltsvVGmC5Jdl-uC5ppuVIyA2CJOkACPklT4rjK9juYjGAbU7yhEpczDtUuTnGj8szFwkhMhhztCXqVznIPfKZBvOeA-AFlX2uCNHsASzHILsx0mDdSVwDp7IKOf-GFSFy-KEskm_ppVSMIdvJ9vnhiOicq75_i9IlYyt0fTPKJ80EJAVSx6aRlPsbThW4');"></div>
+              <div class="flex flex-col gap-space-xs flex-1 min-w-0">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-2 py-0.5 rounded bg-weak-background text-primary text-label-sm font-bold">전세</span>
+                  <span class="text-label-sm text-muted">101동 · 중층</span>
+                </div>
+                <h3 class="text-headline-xs text-on-surface truncate">서면더샵센트럴스타 47평</h3>
+                <p class="text-body-md font-bold text-primary">6억 2,000만원</p>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center justify-between border-t border-surface">
+              <span class="text-label-sm text-muted">방 3개 · 욕실 2개</span>
+              <span class="text-label-sm text-on-surface-variant font-medium">즉시입주 가능</span>
+            </div>
+          </div>
+
+          <div class="w-full rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-md items-start">
+              <div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoGgpj5prcd9YLSI-eumssZKfz8FEepDOhfQda7ggwWOMA4KztCW57ieOXzi49UmGK6N71xh9cujbgKgIyiW3e9EBqrvqT8DpHDv-iVf8ovUKvERP0IZlicQRughpxtecNr2AT8rLHii5FItDvB5XjuvME0k0fpWYG1pbCEf-o0zfbiBMWRTr8LW8W0lwBsiPdzVzXRD54Pr70PMln65lAt3ruzxEygf2iZEkP0S4');"></div>
+              <div class="flex flex-col gap-space-xs flex-1 min-w-0">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-2 py-0.5 rounded bg-weak-background text-primary text-label-sm font-bold">월세</span>
+                  <span class="text-label-sm text-muted">103동 · 로얄층</span>
+                </div>
+                <h3 class="text-headline-xs text-on-surface truncate">서면더샵센트럴스타 33평</h3>
+                <p class="text-body-md font-bold text-primary">보증금 5,000 / 월 180만</p>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center justify-between border-t border-surface">
+              <span class="text-label-sm text-muted">방 2개 · 욕실 2개</span>
+              <span class="text-label-sm text-on-surface-variant font-medium">입주 협의</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-space-md">
+        <div class="flex flex-col gap-space-xs">
+          <h2 class="text-headline-xs text-on-surface">오시는 길</h2>
+          <p class="text-body-sm text-body">부산광역시 부산진구 중앙대로 666번길 21 (부전2동 226-10번지)</p>
+        </div>
+        <div class="w-full h-48 md:h-64 rounded-xl bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYcvEv5k8ECGYi9Vhu3ExTCemUlJjfoiwqk2UZ84tg-EXoYB_CfPVp369xK9HFXD8YvTWC0PovhmHRA4VSYF2ncOjsjsYMKURMLbu-tzQF7_zItw6PKie36FvHTkxb6RdmRJlSW68EDxKttBy4nxR88RB8C_0XosO-eMEbGIzaMO04qTg5tqYjpEG44JF1AIGc_pLemVdT5p1l7wu36fjWHXjWEkxSKYy1sHA86zM');"></div>
+        <div class="flex items-center gap-space-sm text-body-sm text-body">
+          <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+          <span>지하철 1호선 서면역 도보 10분 · 지하철 2호선 전포역 도보 5분 거리</span>
+        </div>
+      </div>
+
+      <footer class="pt-4 pb-2 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-label-sm text-muted">
+        <span>© 2026 서면포스코부동산. All rights reserved.</span>
+        <a id="agent-login-btn" href="admin.html" class="min-h-[44px] inline-flex items-center px-3 text-label-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Agent Login</a>
+      </footer>
+    </div>
+  </main>
+
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.06)] border-t border-border/60">
+    <div class="flex justify-around items-center h-20 px-space-sm">
+      <a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-primary font-bold transition-all" href="index.html">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-label-sm">홈</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-on-surface-variant transition-all" href="news.html">
+        <span class="material-symbols-outlined">newspaper</span>
+        <span class="text-label-sm">부동산 소식</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-on-surface-variant transition-all" href="#agent-section">
+        <span class="material-symbols-outlined">store</span>
+        <span class="text-label-sm">소개</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="db.js"></script>
+  <script>
+    (function () {
+      const typeGroup = document.getElementById('deal-type-group');
+      if (typeGroup) {
+        typeGroup.querySelectorAll('button').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            typeGroup.querySelectorAll('button').forEach(function (b) {
+              b.classList.remove('bg-primary', 'text-on-primary');
+              b.classList.add('bg-surface', 'text-on-surface');
+            });
+            btn.classList.remove('bg-surface', 'text-on-surface');
+            btn.classList.add('bg-primary', 'text-on-primary');
+          });
+        });
+      }
+
+      const quickForm = document.getElementById('quick-listing-form');
+      const quickMsg = document.getElementById('quick-form-msg');
+      if (quickForm) {
+        quickForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (quickMsg) {
+            quickMsg.textContent = '매물 접수가 완료되었습니다! 담당 중개사가 곧 연락드리겠습니다.';
+            quickMsg.classList.remove('hidden');
+          }
+          quickForm.reset();
+        });
+      }
+
+      async function renderBoardPreview() {
+        const section = document.getElementById('board-preview-section');
+        const container = document.getElementById('board-preview');
+        if (!section || !container) return;
+
+        const posts = await getPosts();
+        if (!posts || posts.length === 0) {
+          section.style.display = 'none';
+          return;
+        }
+
+        const latest = posts.slice(0, 3);
+        container.innerHTML = latest.map(function (post) {
+          const summaryRaw = markdownToText(post.content || '');
+          const summary = summaryRaw.length > 60 ? summaryRaw.slice(0, 60) + '...' : summaryRaw;
+          return (
+            '<a href="news-detail.html?id=' + encodeURIComponent(post.id) + '" class="min-h-[44px] w-full rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between gap-3 hover:shadow-md active:scale-[0.99] transition-all border border-border/40">' +
+              '<div class="flex flex-col gap-2">' +
+                '<div class="flex items-center justify-between gap-2">' +
+                  '<span class="px-2.5 py-0.5 rounded-full bg-weak-background text-primary text-label-sm font-bold">' + escapeHtml(post.category || '공지사항') + '</span>' +
+                  '<span class="text-label-sm text-muted">' + escapeHtml(post.date || '') + '</span>' +
+                '</div>' +
+                '<h3 class="text-headline-xs text-on-surface font-bold line-clamp-2">' + escapeHtml(post.title || '') + '</h3>' +
+                '<p class="text-body-sm text-body line-clamp-2">' + escapeHtml(summary) + '</p>' +
+              '</div>' +
+              '<span class="text-label-sm text-primary font-bold inline-flex items-center gap-1 pt-1">자세히 보기 <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>' +
+            '</a>'
+          );
+        }).join('');
+      }
+
+      document.addEventListener('DOMContentLoaded', renderBoardPreview);
+    })();
+  </script>
+</body>
+</html>

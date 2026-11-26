@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <title>게시글 상세 | 서면포스코부동산</title>
+  <style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Toss Product Sans", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+        font-size: 14px;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #f8f9ff;
+        color: #191f28;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+    img { max-width: 100%; object-fit: cover; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#e9eefb",
+            "on-surface-variant": "#414754",
+            "primary-fixed": "#d7e2ff",
+            "inverse-on-surface": "#ebf1fe",
+            "on-primary-fixed": "#001a40",
+            "muted": "#8b95a1",
+            "secondary": "#0056c6",
+            "surface": "#f2f4f6",
+            "surface-container-lowest": "#ffffff",
+            "weak-background": "#e8f3ff",
+            "on-secondary": "#ffffff",
+            "danger": "#e42939",
+            "inverse-surface": "#2b313a",
+            "body": "#4e5968",
+            "border": "#e5e8eb",
+            "on-primary": "#ffffff",
+            "on-surface": "#161c25",
+            "primary": "#0059b9",
+            "surface-container-low": "#eff4ff"
+          },
+          fontSize: {
+            "headline-sm": ["1.375rem", { lineHeight: "1.35", fontWeight: "700" }],
+            "headline-xs": ["1.125rem", { lineHeight: "1.4", fontWeight: "700" }],
+            "body-md": ["1rem", { lineHeight: "1.6" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+            "label-md": ["0.875rem", { lineHeight: "1.4", fontWeight: "600" }],
+            "label-sm": ["0.75rem", { lineHeight: "1.4" }]
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: { "space-sm": "8px", "space-xs": "4px", "space-lg": "24px", "gutter": "16px", "space-md": "16px" }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+</head>
+<body class="bg-surface font-body flex flex-col min-h-screen text-[14px] sm:text-[15px]">
+  <header class="sticky top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe border-b border-border/60">
+    <div class="max-w-3xl mx-auto h-16 px-gutter md:px-6 flex items-center justify-between gap-4">
+      <a href="news.html" class="min-h-[44px] inline-flex items-center gap-1.5 text-on-surface font-bold">
+        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+        <span>목록으로</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-4">
+        <a href="index.html" class="min-h-[44px] inline-flex items-center px-2 text-body-sm font-medium text-on-surface-variant hover:text-primary">홈</a>
+        <a href="news.html" class="min-h-[44px] inline-flex items-center px-2 text-body-sm font-bold text-primary">부동산 소식</a>
+        <a href="admin.html" class="min-h-[44px] inline-flex items-center px-3 rounded-xl bg-surface-container text-body-sm font-medium text-on-surface-variant hover:bg-primary hover:text-on-primary">관리자</a>
+      </nav>
+      <a href="admin.html" aria-label="관리자 페이지" class="w-11 h-11 rounded-full bg-primary flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex flex-col relative w-full max-w-3xl mx-auto px-gutter md:px-6 pt-6 pb-28 md:pb-12 flex-1">
+    <article id="detail-card" class="rounded-2xl bg-surface-container-lowest p-6 md:p-8 shadow-sm border border-border/50 flex flex-col gap-5">
+      <div class="flex items-center justify-between gap-2 flex-wrap">
+        <span id="detail-category" class="px-3 py-1 rounded-full bg-weak-background text-primary text-label-sm font-bold"></span>
+        <span id="detail-date" class="text-label-sm text-muted"></span>
+      </div>
+      <h1 id="detail-title" class="text-headline-sm md:text-[26px] text-on-surface font-bold leading-snug">불러오는 중...</h1>
+      <div class="border-t border-border pt-5">
+        <div id="detail-content" class="text-[15px] text-body"></div>
+      </div>
+      <div id="admin-actions" class="hidden pt-4 border-t border-border flex flex-wrap items-center justify-end gap-3">
+        <a id="edit-btn" href="#" class="min-h-[44px] px-5 rounded-xl bg-surface-container text-on-surface font-bold text-body-sm inline-flex items-center justify-center gap-1.5 hover:bg-primary hover:text-on-primary transition-colors">
+          <span class="material-symbols-outlined text-[18px]">edit</span>
+          수정
+        </a>
+        <button id="delete-btn" type="button" class="min-h-[44px] px-5 rounded-xl bg-danger text-on-primary font-bold text-body-sm inline-flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+          삭제
+        </button>
+      </div>
+      <p id="detail-status" class="hidden text-body-sm text-danger font-medium text-right"></p>
+    </article>
+
+    <div class="mt-6 flex justify-between items-center">
+      <a href="news.html" class="min-h-[44px] px-5 rounded-xl bg-surface-container-lowest border border-border text-on-surface font-bold text-body-sm inline-flex items-center gap-1.5 shadow-sm hover:bg-weak-background transition-colors">
+        <span class="material-symbols-outlined text-[18px]">list</span>
+        전체 목록 보기
+      </a>
+    </div>
+
+    <footer class="mt-8 pt-4 pb-2 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-label-sm text-muted">
+      <span>© 2026 서면포스코부동산. All rights reserved.</span>
+      <a href="admin.html" class="min-h-[44px] inline-flex items-center px-3 text-label-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Agent Login</a>
+    </footer>
+  </main>
+
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.06)] border-t border-border/60">
+    <div class="flex justify-around items-center h-20 px-space-sm">
+      <a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-on-surface-variant transition-all" href="index.html">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-label-sm">홈</span>
+      </a>
+      <a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-primary font-bold transition-all" href="news.html">
+        <span class="material-symbols-outlined">newspaper</span>
+        <span class="text-label-sm">부동산 소식</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[56px] text-on-surface-variant transition-all" href="index.html#agent-section">
+        <span class="material-symbols-outlined">store</span>
+        <span class="text-label-sm">소개</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="db.js"></script>
+  <script>
+    (function () {
+      document.addEventListener('DOMContentLoaded', async function () {
+        const params = new URLSearchParams(window.location.search);
+        const postId = params.get('id');
+        const titleEl = document.getElementById('detail-title');
+        const categoryEl = document.getElementById('detail-category');
+        const dateEl = document.getElementById('detail-date');
+        const contentEl = document.getElementById('detail-content');
+        const adminActions = document.getElementById('admin-actions');
+        const editBtn = document.getElementById('edit-btn');
+        const deleteBtn = document.getElementById('delete-btn');
+        const statusEl = document.getElementById('detail-status');
+
+        if (!postId) {
+          titleEl.textContent = '게시글을 찾을 수 없습니다.';
+          contentEl.innerHTML = '<p class="text-body-sm text-muted">올바른 게시글 링크로 접속해 주세요.</p>';
+          return;
+        }
+
+        const post = await getPostById(postId);
+        if (!post) {
+          titleEl.textContent = '존재하지 않는 게시글입니다.';
+          contentEl.innerHTML = '<p class="text-body-sm text-muted">삭제되었거나 찾을 수 없는 게시글입니다.</p>';
+          return;
+        }
+
+        document.title = post.title + ' | 서면포스코부동산';
+        categoryEl.textContent = post.category || '공지사항';
+        dateEl.textContent = post.date || '';
+        titleEl.textContent = post.title || '';
+        contentEl.innerHTML = renderMarkdown(post.content || '');
+
+        if (isAdmin()) {
+          adminActions.classList.remove('hidden');
+          editBtn.href = 'news-write.html?id=' + encodeURIComponent(post.id);
+          deleteBtn.addEventListener('click', async function () {
+            if (!window.confirm('이 게시글을 삭제하시겠습니까?')) return;
+            deleteBtn.disabled = true;
+            deleteBtn.textContent = '삭제 중...';
+            try {
+              await deletePost(post.id);
+              window.location.href = 'news.html';
+            } catch (err) {
+              statusEl.textContent = err.message || '삭제에 실패했습니다.';
+              statusEl.classList.remove('hidden');
+              deleteBtn.disabled = false;
+              deleteBtn.textContent = '삭제';
+            }
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

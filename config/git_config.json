@@ -1,0 +1,6 @@
+{
+  "github_token": "YOUR_GITHUB_TOKEN",
+  "github_owner": "seomyeonposco",
+  "github_repo": "posco",
+  "data_file_path": "data/posts.json"
+}
